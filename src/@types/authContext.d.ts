@@ -3,12 +3,13 @@ export type AuthContextType = {
   username: string | null;
   loggedInUserID: string | null;
   isLoggedIn: boolean;
-  loaded: boolean;
+  associatedDivvies: string[];
   //Divvy logged in Context
-  login?: (payload: { username: string; password: string }) => Promise<void>;
-  register?: (payload: {
-    username: string;
-    email: string;
-    password: string;
-  }) => Promise<void>;
+  divvyID: string | null;
+  // login?: (payload: { username: string; password: string }) => Promise<void>;
+  // register?: (payload: {
+  //   username: string;
+  //   email: string;
+  //   password: string;
+  // }) => Promise<void>;
 };

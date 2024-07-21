@@ -4,9 +4,9 @@ import Login from '../components/Login.tsx'
 const Auth = () => {
 
   return(
-    <>
+    <div>
       Auth Page
-    </>
+    </div>
   )
 }
 

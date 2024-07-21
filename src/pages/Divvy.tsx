@@ -1,10 +1,11 @@
 
- const Divvy = () => {
+
+const Divvy = () => {
 
   return(
-    <>
+    <div>
       Divvy Page
-    </>
+    </div>
   )
 }
 

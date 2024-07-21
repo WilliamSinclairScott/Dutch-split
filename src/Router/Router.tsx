@@ -7,6 +7,9 @@ import Event from '../pages/Event'
 import Item from '../pages/Item'
 import Landing from '../pages/Landing'
 
+//api imports
+import { fetchDivvyData } from '../config/firebaseFunctions'
+
 import { 
   createBrowserRouter, 
   RouterProvider, 
@@ -36,6 +39,11 @@ import { Flex } from '@radix-ui/themes'
         {
           path: '/:divvyID',
           element: <Divvy />,
+          loader: async () => {
+            return {
+              fetchDivvyData
+            }
+          }
         },
         {
           path: '/:divvyID/:eventID',

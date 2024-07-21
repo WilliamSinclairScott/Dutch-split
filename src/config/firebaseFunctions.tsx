@@ -12,3 +12,6 @@ export const submitData = async (data: string) => {
   }
 }
 
+export const fetchDivvyData = async ( props ) => {
+  console.log("Fetching divvy data");
+}

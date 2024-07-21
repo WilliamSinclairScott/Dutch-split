@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
-import { AuthContext } from '../../src/'
-import { Navigate } from "react-router"
+import { AuthContext } from './AuthContext';
+import { Navigate } from "react-router";
 
-export defualt function DivvyProtected(props:{
+export default function DivvyProtected(props:{
   children: React.ReactNode
 }) {
-  const { storedToken } = useContext(AuthContext);
-  if (storedToken === null) {
+  const { isLoggedIn } = useContext(AuthContext);
+  if (!isLoggedIn) {
     return <Navigate to='/' />;
   }
   return props.children;
